@@ -37,7 +37,7 @@ This code is a Kusto query that retrieves information about NetApp capacity pool
 This query provides a detailed overview of the capacity pools, including their sizes, throughput metrics, and other important properties.
 
 ```OQL
-// Example ANF Capacity Pool Query
+// Example - ANF Capacity Pool Query
 resources
 | where type =~ 'microsoft.NetApp/netAppAccounts/capacityPools'
 | extend PoolName = extract(@"capacityPools/([^/]+)", 1, id)

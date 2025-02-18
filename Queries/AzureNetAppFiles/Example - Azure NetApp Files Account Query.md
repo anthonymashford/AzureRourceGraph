@@ -17,6 +17,7 @@ This code is written in Kusto Query Language (KQL) and is used to query Azure re
 So, this query essentially retrieves a list of NetApp accounts along with their relevant details and the corresponding subscription names.
 
 ```OQL
+// Example - ANF Account Query
 resources
 | where type =~ 'microsoft.NetApp/netAppAccounts'
 | project 

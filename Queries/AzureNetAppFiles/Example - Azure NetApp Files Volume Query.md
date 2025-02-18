@@ -69,7 +69,7 @@ This code is a Kusto query that retrieves detailed information about NetApp volu
 This query provides a comprehensive overview of the volumes, including their quotas, throughput metrics, network and security features, and data protection settings.
 
 ```OQL
-// Example ANF Volume Query
+// Example - ANF Volume Query
 resources
 | where type =~ 'microsoft.NetApp/netAppAccounts/CapacityPools/volumes'
 | extend PoolName = extract(@"capacityPools/([^/]+)", 1, id)
